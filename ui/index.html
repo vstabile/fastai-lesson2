@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Classifier</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Image Classifier</h1>
+      <div id="uploadZone" class="upload-zone">
+        <div class="upload-prompt">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+          <p>Drag and drop an image here<br />or click to select</p>
+        </div>
+        <input type="file" id="fileInput" accept="image/*" class="file-input" />
+      </div>
+
+      <div id="previewSection" class="preview-section" style="display: none">
+        <img id="previewImage" class="preview-image" src="" alt="Preview" />
+        <div id="loading" class="loading" style="display: none">
+          <div class="spinner"></div>
+          <p>Analyzing image...</p>
+        </div>
+        <div id="resultsList" class="results-list"></div>
+        <button id="resetButton" class="reset-button">Try Another Image</button>
+      </div>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
